@@ -1,0 +1,2084 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadaun & Jadaun Associates | IP Litigation & Prosecution Firm</title>
+  <meta name="description" content="Firm profile for Jadaun & Jadaun Associates - Premier Intellectual Property litigation, trademark prosecution, and full-service legal advisory in Agra, Delhi & UK.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts: Playfair Display + Cormorant Garamond + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#070D18',
+              900: '#0B1528',
+              850: '#0F1F3D',
+              800: '#152B52',
+              700: '#1D3B6F',
+              600: '#2A4E8C',
+            },
+            cream: {
+              50: '#FAF8F3',
+              100: '#F5F1E8',
+              200: '#ECE5D6',
+              300: '#DFD5C0',
+              800: '#3A3326',
+              900: '#231E16',
+            },
+            gold: {
+              300: '#E6CF8B',
+              400: '#D9B963',
+              500: '#C9A24B',
+              600: '#B08B39',
+              700: '#8C6C26',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            cormorant: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            'widest-plus': '0.22em',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- React & Babel for standalone rendering -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    /* Custom utility & aesthetic styles */
+    ::selection {
+      background-color: #C9A24B;
+      color: #0F1F3D;
+    }
+    
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #F3E3B6 0%, #C9A24B 50%, #9E7928 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-border-glow:hover {
+      box-shadow: 0 0 25px -5px rgba(201, 162, 75, 0.25);
+      border-color: rgba(201, 162, 75, 0.6);
+    }
+
+    .subtle-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(201, 162, 75, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(201, 162, 75, 0.04) 1px, transparent 1px);
+    }
+
+    .gold-divider {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gold-divider::before, .gold-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201, 162, 75, 0.4), transparent);
+    }
+
+    /* Smooth reveal transitions */
+    .reveal-element {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-element.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Subtle paper texture simulation on cream */
+    .cream-texture {
+      background-color: #F5F1E8;
+      background-image: radial-gradient(rgba(15, 31, 61, 0.02) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+
+    .team-portrait {
+      object-position: center top;
+      transform: scale(1.05);
+    }
+
+    .team-founder { object-position: 50% 18%; }
+    .team-vipul { object-position: 50% 25%; }
+    .team-rupender { object-position: 50% 18%; }
+    .team-sparsh { object-position: 50% 20%; }
+    .team-venkatesh { object-position: 50% 15%; }
+    .team-rashi { object-position: 50% 15%; }
+    .team-akshat { object-position: 50% 20%; }
+    .team-arshiya { object-position: 50% 18%; }
+
+    .client-logo-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: #F5F2EA;
+    }
+
+    .client-logo-sukun {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #2a2a2a;
+      box-shadow: inset 0 0 0 8px rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 5px solid #1a1a1a;
+    }
+
+    .client-logo-sukun::before,
+    .client-logo-sukun::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #1a8d41 0 33%, #e6d34b 33% 66%, #d9282b 66% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .client-logo-sukun::after {
+      background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.08));
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      inset: 10px 10px 10px 10px;
+      border-radius: 50%;
+    }
+
+    .client-logo-sukun-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 86%;
+      height: 86%;
+      border-radius: 50%;
+      background: rgba(28, 28, 28, 0.7);
+      border: 2px solid rgba(255,255,255,0.08);
+      color: #f4eee4;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .client-logo-sukun-word {
+      font-size: 1.1rem;
+      line-height: 1;
+      font-family: serif;
+      color: #f4eee4;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-shadow: 0 0 2px rgba(255,255,255,0.15);
+      transform: scaleY(1.2);
+    }
+
+    .client-logo-sukun-cafe {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: #f4eee4;
+      margin-top: 0.2rem;
+      font-weight: 700;
+    }
+
+    .client-logo-plunge {
+      position: relative;
+      width: 100%;
+      max-width: 340px;
+      height: 120px;
+      border: 3px solid rgba(255,255,255,0.8);
+      background: rgba(5, 18, 28, 0.88);
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .client-logo-plunge::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
+    }
+
+    .client-logo-plunge-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2rem;
+      color: #74d7e5;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+
+    .client-logo-plunge-main {
+      font-size: clamp(2.3rem, 4vw, 5rem);
+      line-height: 0.9;
+      color: #7ae2ef;
+      text-shadow: 0 0 18px rgba(122, 226, 239, 0.2);
+      font-weight: 800;
+    }
+
+    .client-logo-plunge-sub {
+      font-size: clamp(1.2rem, 2vw, 2.6rem);
+      line-height: 0.9;
+      color: #d9f8ff;
+      letter-spacing: 0.04em;
+    }
+
+    .client-logo-avi {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      height: 120px;
+      background: #0a3b6d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15);
+    }
+
+    .client-logo-avi::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0.7;
+    }
+
+    .client-logo-avi-text {
+      position: relative;
+      z-index: 1;
+      font-size: clamp(2.7rem, 5vw, 5.2rem);
+      line-height: 1;
+      font-weight: 800;
+      color: #f5be15;
+      letter-spacing: -0.04em;
+      text-transform: none;
+      font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+    }
+
+    .client-logo-avi-text span {
+      color: #f5be15;
+      display: inline-block;
+    }
+
+    body.caution-open {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-navy-900 text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-gold-500 selection:text-navy-950">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    // SVG Iconsyes
+    const Icons = {
+      Scale: () => (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+        </svg>
+      ),
+      ShieldCheck: () => (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      ),
+      FileText: () => (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
+      Gavel: () => (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M20 7l-3-3-4 4 3 3 4-4zm-9 9l-4-4m0 0l-4 4 4 4 4-4zm4-4l-3-3" />
+        </svg>
+      ),
+      MapPin: () => (
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      ),
+      Mail: () => (
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+      Phone: () => (
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+      ),
+      ArrowRight: () => (
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      ),
+      Check: () => (
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+        </svg>
+      ),
+      Menu: () => (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      ),
+      X: () => (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      )
+    };
+
+    // Custom Scroll Reveal Hook
+    function useScrollReveal() {
+      useEffect(() => {
+        const observerCallback = (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+            }
+          });
+        };
+
+        const observerOptions = {
+          threshold: 0.12,
+          rootMargin: "0px 0px -40px 0px"
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        const elements = document.querySelectorAll('.reveal-element');
+        elements.forEach(el => observer.observe(el));
+
+        return () => observer.disconnect();
+      }, []);
+    }
+
+    // Animated Counter Component
+    function AnimatedStat({ value, label, subtext }) {
+      const [count, setCount] = useState(0);
+      const [hasAnimated, setHasAnimated] = useState(false);
+      const statRef = useRef(null);
+
+      // Extract numeric base if possible (e.g., '25-40+' -> display string after animation)
+      useEffect(() => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting && !hasAnimated) {
+              setHasAnimated(true);
+            }
+          },
+          { threshold: 0.4 }
+        );
+
+        if (statRef.current) observer.observe(statRef.current);
+        return () => observer.disconnect();
+      }, [hasAnimated]);
+
+      useEffect(() => {
+        if (!hasAnimated) return;
+        let start = 0;
+        const end = 100;
+        const duration = 1200;
+        const stepTime = Math.abs(Math.floor(duration / end));
+
+        const timer = setInterval(() => {
+          start += 2;
+          setCount(start);
+          if (start >= end) clearInterval(timer);
+        }, stepTime);
+
+        return () => clearInterval(timer);
+      }, [hasAnimated]);
+
+      return (
+        <div ref={statRef} className="reveal-element text-center p-5 relative group">
+          <div className="font-serif text-3xl lg:text-4xl font-bold gold-gradient-text tracking-tight transition-transform duration-300 group-hover:scale-105">
+            {value}
+          </div>
+          <div className="w-10 h-0.5 bg-gold-500/60 mx-auto my-3 transition-all duration-300 group-hover:w-16 group-hover:bg-gold-400"></div>
+          <p className="text-xs uppercase tracking-widest text-slate-300 font-medium leading-relaxed">
+            {label}
+          </p>
+          {subtext && <p className="text-[11px] text-slate-400 mt-1">{subtext}</p>}
+        </div>
+      );
+    }
+
+    // Section Label Header Component
+    function SectionLabel({ text, light = false }) {
+      return (
+        <div className="inline-flex items-center gap-3 mb-3">
+          <span className={`h-px w-6 ${light ? 'bg-gold-600/70' : 'bg-gold-500/80'}`}></span>
+          <span className={`text-[11px] font-bold uppercase tracking-widest-plus ${light ? 'text-gold-700' : 'text-gold-400'}`}>
+            {text}
+          </span>
+          <span className={`h-px w-6 ${light ? 'bg-gold-600/70' : 'bg-gold-500/80'}`}></span>
+        </div>
+      );
+    }
+
+    // Main App Component
+    function App() {
+      useScrollReveal();
+      const [isScrolled, setIsScrolled] = useState(false);
+      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+      const [copiedEmail, setCopiedEmail] = useState(false);
+      const [showCaution, setShowCaution] = useState(true);
+
+      useEffect(() => {
+        const handleScroll = () => {
+          if (window.scrollY > 30) {
+            setIsScrolled(true);
+          } else {
+            setIsScrolled(false);
+          }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, []);
+
+      useEffect(() => {
+        document.body.classList.toggle('caution-open', showCaution);
+        return () => document.body.classList.remove('caution-open');
+      }, [showCaution]);
+
+      const acknowledgeCaution = () => {
+        setShowCaution(false);
+      };
+
+      const copyEmailToClipboard = () => {
+        navigator.clipboard.writeText('adv.amogh18@gmail.com');
+        setCopiedEmail(true);
+        setTimeout(() => setCopiedEmail(false), 2500);
+      };
+
+      return (
+        <div className="min-h-screen flex flex-col bg-navy-900 selection:bg-gold-500 selection:text-navy-950">
+
+          {showCaution && (
+            <div
+              className="fixed inset-0 z-[100] flex items-center justify-center px-4 py-8 bg-navy-950/80 backdrop-blur-sm"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="caution-notice-title"
+            >
+              <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-cream-50 text-cream-900 rounded-sm shadow-2xl border border-gold-500/30">
+                <button
+                  type="button"
+                  onClick={acknowledgeCaution}
+                  className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-gold-500 hover:bg-gold-400 text-navy-950 rounded-sm transition-colors"
+                  aria-label="Close caution notice"
+                >
+                  <Icons.X />
+                </button>
+
+                <div className="px-6 sm:px-10 pt-10 pb-8">
+                  <div className="flex justify-center mb-5">
+                    <img src="assets/logo.png" alt="" className="w-16 h-16 rounded-full object-cover ring-1 ring-gold-500/50" />
+                  </div>
+                  <h2
+                    id="caution-notice-title"
+                    className="text-center font-serif text-sm sm:text-base font-semibold tracking-[0.18em] uppercase text-navy-950 mb-6"
+                  >
+                    Caution Notice to Whomsoever It May Concern
+                  </h2>
+                  <div className="space-y-4 text-[13px] sm:text-sm leading-relaxed text-cream-800 font-normal">
+                    <p>
+                      As per the rules of the Bar Council of India, law firms and advocates are not permitted to solicit work or advertise. This website is meant solely for informational purposes to provide a firm profile and general overview of Jadaun & Jadaun Associates. Nothing contained herein constitutes formal legal advice or creates an attorney-client relationship. All viewers accessing this site do so voluntarily.
+                    </p>
+                    <p>
+                      By continuing, you acknowledge that you are accessing this information of your own accord and that Jadaun & Jadaun Associates shall not be liable for any consequence arising from reliance on the contents of this website.
+                    </p>
+                  </div>
+                  <div className="mt-8 flex justify-center">
+                    <button
+                      type="button"
+                      onClick={acknowledgeCaution}
+                      className="px-8 py-2.5 bg-navy-900 hover:bg-navy-800 text-gold-300 text-xs font-semibold uppercase tracking-widest rounded-sm border border-gold-500/40 transition-colors"
+                    >
+                      Close
+                    </button>
+                  </div>
+                  <p className="mt-6 text-center text-[11px] text-cream-800/80">
+                    Jadaun & Jadaun Associates
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+          
+          {/* =========================================================
+              STICKY TOP NAVIGATION
+             ========================================================= */}
+          <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+            isScrolled 
+              ? 'bg-navy-950/95 backdrop-blur-md py-3 shadow-xl border-b border-gold-500/20' 
+              : 'bg-navy-900/80 backdrop-blur-sm py-5 border-b border-white/5'
+          }`}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-between">
+                
+                {/* Brand Monogram & Title */}
+                <a href="#hero" className="flex items-center gap-3 group">
+                  <img
+                    src="assets/logo.png"
+                    alt="Jadaun & Jadaun Associates"
+                    className="w-10 h-10 rounded-full object-cover shadow-md ring-1 ring-gold-500/50 transition-all duration-300 group-hover:ring-gold-400 group-hover:shadow-[0_0_12px_rgba(201,162,75,0.35)]"
+                  />
+                  <div className="flex flex-col">
+                    <span className="font-serif text-sm tracking-[0.16em] uppercase text-slate-100 font-semibold group-hover:text-gold-300 transition-colors">
+                      Jadaun & Jadaun
+                    </span>
+                    <span className="text-[9px] uppercase tracking-widest text-gold-400/90 font-medium">
+                      Associates · IP & Litigation
+                    </span>
+                  </div>
+                </a>
+
+                {/* Desktop Nav Links */}
+                <nav className="hidden lg:flex items-center space-x-7 text-[12px] font-medium tracking-wider uppercase text-slate-300">
+                  <a href="#about" className="hover:text-gold-400 transition-colors duration-200">Who We Are</a>
+                  <a href="#why-us" className="hover:text-gold-400 transition-colors duration-200">Why J&J</a>
+                  <a href="#practices" className="hover:text-gold-400 transition-colors duration-200">Practices</a>
+                  <a href="#ip-prosecution" className="hover:text-gold-400 transition-colors duration-200">IP Lifecycle</a>
+                  <a href="#track-record" className="hover:text-gold-400 transition-colors duration-200">Track Record</a>
+                  <a href="#founder" className="hover:text-gold-400 transition-colors duration-200">Founder</a>
+                  <a href="#team" className="hover:text-gold-400 transition-colors duration-200">Team</a>
+                  <a href="#presence" className="hover:text-gold-400 transition-colors duration-200">Offices</a>
+                </nav>
+
+                {/* Direct Action Button */}
+                <div className="hidden sm:flex items-center gap-4">
+                  <a 
+                    href="#contact" 
+                    className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-navy-950 bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-300 hover:to-gold-400 rounded transition-all duration-300 shadow-md hover:shadow-gold-500/20 active:scale-95"
+                  >
+                    Consultation
+                  </a>
+                </div>
+
+                {/* Mobile Menu Toggle */}
+                <div className="flex lg:hidden">
+                  <button 
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    className="p-2 text-gold-400 hover:text-white transition-colors focus:outline-none"
+                    aria-label="Toggle menu"
+                  >
+                    {mobileMenuOpen ? <Icons.X /> : <Icons.Menu />}
+                  </button>
+                </div>
+              </div>
+
+              {/* Mobile Drawer */}
+              {mobileMenuOpen && (
+                <div className="lg:hidden mt-4 pt-4 pb-3 border-t border-gold-500/20 space-y-3 bg-navy-950/95 px-2 rounded-b">
+                  <a 
+                    href="#about" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-xs uppercase tracking-wider text-slate-200 hover:text-gold-400 py-1.5"
+                  >
+                    Who We Are
+                  </a>
+                  <a 
+                    href="#why-us" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-xs uppercase tracking-wider text-slate-200 hover:text-gold-400 py-1.5"
+                  >
+                    Why J&J
+                  </a>
+                  <a 
+                    href="#practices" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-xs uppercase tracking-wider text-slate-200 hover:text-gold-400 py-1.5"
+                  >
+                    Practice Areas
+                  </a>
+                  <a 
+                    href="#ip-prosecution" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-xs uppercase tracking-wider text-slate-200 hover:text-gold-400 py-1.5"
+                  >
+                    IP & Trademark
+                  </a>
+                  <a 
+                    href="#track-record" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-xs uppercase tracking-wider text-slate-200 hover:text-gold-400 py-1.5"
+                  >
+                    Track Record
+                  </a>
+                  <a 
+                    href="#founder" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-xs uppercase tracking-wider text-slate-200 hover:text-gold-400 py-1.5"
+                  >
+                    Meet the Founder
+                  </a>
+                  <a 
+                    href="#team" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-xs uppercase tracking-wider text-slate-200 hover:text-gold-400 py-1.5"
+                  >
+                    Team
+                  </a>
+                  <a 
+                    href="#presence" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-xs uppercase tracking-wider text-slate-200 hover:text-gold-400 py-1.5"
+                  >
+                    Offices & Presence
+                  </a>
+                  <a 
+                    href="#contact" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-center mt-3 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-navy-950 bg-gold-400 rounded"
+                  >
+                    Direct Inquiry
+                  </a>
+                </div>
+              )}
+            </div>
+          </header>
+
+          {/* =========================================================
+              HERO SECTION (Dark Navy)
+             ========================================================= */}
+          <section id="hero" className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-20 px-4 sm:px-6 lg:px-8 subtle-grid overflow-hidden bg-navy-950">
+            {/* Ambient Radial Highlights */}
+            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-navy-700/20 rounded-full blur-[130px] pointer-events-none"></div>
+            <div className="absolute bottom-10 right-10 w-80 h-80 bg-gold-500/5 rounded-full blur-[90px] pointer-events-none"></div>
+            
+            <div className="relative max-w-4xl mx-auto text-center z-10">
+              
+              {/* Centered Crest Lockup */}
+              <div className="reveal-element inline-flex flex-col items-center mb-6">
+                <img
+                  src="assets/logo.png"
+                  alt="Jadaun & Jadaun Associates"
+                  className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover shadow-[0_0_40px_rgba(201,162,75,0.25)] ring-2 ring-gold-500/40 mb-4"
+                />
+              </div>
+
+              {/* Tag / Profile Badge */}
+              <div className="reveal-element mb-5">
+                <span className="px-3.5 py-1 text-[10px] uppercase font-bold tracking-widest text-gold-300 border border-gold-500/30 rounded-full bg-navy-900/60 backdrop-blur">
+                  FIRM PROFILE & PRACTICE OVERVIEW
+                </span>
+              </div>
+
+              {/* Large Serif Headline */}
+              <h1 className="reveal-element font-serif text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-slate-100 leading-[1.15] mb-6">
+                Intellectual Property <br className="hidden sm:inline" />
+                <span className="gold-gradient-text italic font-serif">Litigation & Prosecution</span>
+              </h1>
+
+              {/* Subtext */}
+              <p className="reveal-element text-base sm:text-lg md:text-xl text-slate-300 font-light max-w-2xl mx-auto leading-relaxed mb-10">
+                With full-service representation across civil, criminal, commercial, and NI Act matters.
+              </p>
+
+              {/* Location Badges & CTA */}
+              <div className="reveal-element flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 pt-2">
+                <a 
+                  href="#practices" 
+                  className="w-full sm:w-auto px-7 py-3.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-semibold text-xs tracking-widest uppercase rounded shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  <span>Explore Practice Areas</span>
+                  <Icons.ArrowRight />
+                </a>
+                <a 
+                  href="#about" 
+                  className="w-full sm:w-auto px-7 py-3.5 border border-slate-600 hover:border-gold-400/70 text-slate-200 hover:text-gold-300 text-xs font-semibold tracking-widest uppercase rounded backdrop-blur-sm transition-all duration-300"
+                >
+                  Firm Profile
+                </a>
+              </div>
+
+              {/* Jurisdictional Footnote */}
+              <div className="reveal-element mt-14 pt-8 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-y-2 gap-x-8 text-[11px] uppercase tracking-widest text-slate-400">
+                <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-gold-500"></span>Agra</span>
+                <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-gold-500"></span>Delhi High Court & Registries</span>
+                <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-gold-500"></span>United Kingdom (Advisory)</span>
+              </div>
+            </div>
+          </section>
+
+          {/* =========================================================
+              WHO WE ARE (Warm Cream)
+             ========================================================= */}
+          <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 cream-texture text-cream-900 relative">
+            <div className="max-w-7xl mx-auto">
+              
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <SectionLabel text="FIRM OVERVIEW" light={true} />
+                <h2 className="font-serif text-3xl sm:text-4xl text-cream-900 font-normal mt-2 tracking-tight">
+                  Who We Are
+                </h2>
+                <div className="w-12 h-0.5 bg-gold-600/50 mx-auto mt-4"></div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                {/* Left: Pull quote & Narrative */}
+                <div className="lg:col-span-7 space-y-6">
+                  
+                  {/* Styled Serif Pull Quote */}
+                  <div className="reveal-element p-6 sm:p-8 bg-white/80 border-l-4 border-gold-600 rounded-r-lg shadow-sm">
+                    <p className="font-cormorant italic text-xl sm:text-2xl text-cream-900 leading-relaxed font-semibold">
+                      “A litigation and prosecution firm built around an intellectual property core — advising on trademark strategy, brand protection, and legal risk with a business-first lens.”
+                    </p>
+                  </div>
+
+                  <div className="reveal-element text-cream-800 space-y-4 text-sm sm:text-base leading-relaxed font-normal">
+                    <p>
+                      Founded and led by <strong>Amogh Singh</strong>, an Intellectual Property attorney with over 4 years of focused expertise in trademark prosecution, portfolio management, and IP contentious proceedings, <strong>Jadaun & Jadaun Associates</strong> represents businesses, founders, and creators across the brand lifecycle.
+                    </p>
+                    <p>
+                      While intellectual property forms our core technical specialty, our counsel is anchored in broad-based courtroom capability. We provide integrated representation across <strong>civil disputes, criminal defense, corporate-commercial matters, and Negotiable Instruments Act (Section 138)</strong> cheque dishonour proceedings. This dual capability ensures our clients receive not only rigorous trademark protection but complete legal defense across forums.
+                    </p>
+                  </div>
+
+                  <div className="reveal-element pt-4 flex flex-wrap gap-3 text-xs font-semibold text-cream-900">
+                    <span className="px-3 py-1.5 bg-cream-200/80 rounded border border-cream-300">
+                      Trademark Registry Advocacy
+                    </span>
+                    <span className="px-3 py-1.5 bg-cream-200/80 rounded border border-cream-300">
+                      Commercial Injunctions
+                    </span>
+                    <span className="px-3 py-1.5 bg-cream-200/80 rounded border border-cream-300">
+                      BIS & Regulatory Advisory
+                    </span>
+                  </div>
+                </div>
+
+                {/* Right: Sidebar Stat & Highlight Card */}
+                <div className="lg:col-span-5">
+                  <div className="reveal-element bg-navy-850 text-slate-100 p-8 rounded-xl shadow-xl border border-gold-500/30 space-y-6">
+                    <div className="border-b border-white/10 pb-4">
+                      <span className="text-[10px] uppercase font-bold tracking-widest text-gold-400">
+                        PRACTICE HIGHLIGHTS
+                      </span>
+                      <h3 className="font-serif text-xl text-white font-medium mt-1">
+                        At a Glance
+                      </h3>
+                    </div>
+
+                    <div className="space-y-5 divide-y divide-white/10 text-xs">
+                      <div className="pt-3 first:pt-0">
+                        <span className="text-gold-400 font-bold block text-sm tracking-wide">4+ Years Specialization</span>
+                        <span className="text-slate-300">Intellectual Property Advisory & High-Stakes Litigation</span>
+                      </div>
+
+                      <div className="pt-3">
+                        <span className="text-gold-400 font-bold block text-sm tracking-wide">30+ Trademark Applications</span>
+                        <span className="text-slate-300">Filed, Examined & Prosecuted to Registration</span>
+                      </div>
+
+                      <div className="pt-3">
+                        <span className="text-gold-400 font-bold block text-sm tracking-wide">Integrated Verticals</span>
+                        <span className="text-slate-300">IP Prosecution · Civil Suits · Criminal Defense · Commercial</span>
+                      </div>
+
+                      <div className="pt-3">
+                        <span className="text-gold-400 font-bold block text-sm tracking-wide">Multi-Jurisdictional Reach</span>
+                        <span className="text-slate-300">Agra (HQ) · Delhi Registry & High Court · United Kingdom Advisory</span>
+                      </div>
+                    </div>
+
+                    <div className="pt-3">
+                      <a 
+                        href="#contact" 
+                        className="block w-full text-center py-2.5 px-4 bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold uppercase tracking-wider text-[11px] rounded transition-colors"
+                      >
+                        Request Case Evaluation
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          {/* =========================================================
+              WHY JADAUN & JADAUN (Dark Navy)
+             ========================================================= */}
+          <section id="why-us" className="py-24 px-4 sm:px-6 lg:px-8 bg-navy-850 border-y border-gold-500/20 text-slate-100">
+            <div className="max-w-7xl mx-auto">
+              
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <SectionLabel text="VALUE PROPOSITION" />
+                <h2 className="font-serif text-3xl sm:text-4xl font-normal mt-2 tracking-tight text-white">
+                  Why Jadaun & Jadaun
+                </h2>
+                <div className="w-12 h-0.5 bg-gold-500 mx-auto mt-4"></div>
+                <p className="text-slate-300 text-sm mt-4 font-light">
+                  A bespoke legal practice designed to bridge technical legal precision with commercial realities.
+                </p>
+              </div>
+
+              {/* 2x2 Grid of Numbered Cards (01-04) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                
+                {/* 01 */}
+                <div className="reveal-element bg-navy-900/90 p-8 rounded-lg border border-gold-500/20 gold-border-glow transition-all duration-300 group">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-serif text-3xl font-bold text-gold-500/40 group-hover:text-gold-400 transition-colors">01</span>
+                    <div className="w-9 h-9 rounded-full bg-navy-800 border border-gold-500/30 flex items-center justify-center text-gold-400">
+                      <Icons.Scale />
+                    </div>
+                  </div>
+                  <h3 className="font-serif text-xl font-medium text-white mb-2 group-hover:text-gold-300 transition-colors">
+                    Business-First Advisory
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    Legal risk calculated through commercial viability — protecting brand equity and operational momentum rather than offering detached legal theory.
+                  </p>
+                </div>
+
+                {/* 02 */}
+                <div className="reveal-element bg-navy-900/90 p-8 rounded-lg border border-gold-500/20 gold-border-glow transition-all duration-300 group">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-serif text-3xl font-bold text-gold-500/40 group-hover:text-gold-400 transition-colors">02</span>
+                    <div className="w-9 h-9 rounded-full bg-navy-800 border border-gold-500/30 flex items-center justify-center text-gold-400">
+                      <Icons.ShieldCheck />
+                    </div>
+                  </div>
+                  <h3 className="font-serif text-xl font-medium text-white mb-2 group-hover:text-gold-300 transition-colors">
+                    Direct Client Access
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    Direct counsel and representation from the Founding Partner on every matter, ensuring no dilution through junior layers or bureaucratic handoffs.
+                  </p>
+                </div>
+
+                {/* 03 */}
+                <div className="reveal-element bg-navy-900/90 p-8 rounded-lg border border-gold-500/20 gold-border-glow transition-all duration-300 group">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-serif text-3xl font-bold text-gold-500/40 group-hover:text-gold-400 transition-colors">03</span>
+                    <div className="w-9 h-9 rounded-full bg-navy-800 border border-gold-500/30 flex items-center justify-center text-gold-400">
+                      <Icons.FileText />
+                    </div>
+                  </div>
+                  <h3 className="font-serif text-xl font-medium text-white mb-2 group-hover:text-gold-300 transition-colors">
+                    Regulatory & Compliance
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    Cross-domain capabilities encompassing Bureau of Indian Standards (BIS) certifications, statutory filings, and multi-agency compliance roadmaps.
+                  </p>
+                </div>
+
+                {/* 04 */}
+                <div className="reveal-element bg-navy-900/90 p-8 rounded-lg border border-gold-500/20 gold-border-glow transition-all duration-300 group">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-serif text-3xl font-bold text-gold-500/40 group-hover:text-gold-400 transition-colors">04</span>
+                    <div className="w-9 h-9 rounded-full bg-navy-800 border border-gold-500/30 flex items-center justify-center text-gold-400">
+                      <Icons.Gavel />
+                    </div>
+                  </div>
+                  <h3 className="font-serif text-xl font-medium text-white mb-2 group-hover:text-gold-300 transition-colors">
+                    Full-Spectrum Litigation
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    Seamless escalation from registry dispute mediation to civil trial courts, High Courts, and commercial appellate tribunals.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          {/* =========================================================
+              PRACTICE AREAS (Warm Cream)
+             ========================================================= */}
+          <section id="practices" className="py-24 px-4 sm:px-6 lg:px-8 cream-texture text-cream-900">
+            <div className="max-w-7xl mx-auto">
+              
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <SectionLabel text="CORE JURISDICTIONS & DISCIPLINES" light={true} />
+                <h2 className="font-serif text-3xl sm:text-4xl font-normal mt-2 tracking-tight text-cream-900">
+                  Practice Areas
+                </h2>
+                <div className="w-12 h-0.5 bg-gold-600/50 mx-auto mt-4"></div>
+                <p className="text-cream-800 text-sm mt-4 font-normal">
+                  Dual-structured advisory: specialized intellectual property solutions alongside comprehensive general litigation.
+                </p>
+              </div>
+
+              {/* Two-Column List Layout */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                
+                {/* Column 1: Niche IP Practice */}
+                <div className="reveal-element bg-white p-8 sm:p-10 rounded-xl shadow-md border border-cream-300/80 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-3 pb-4 border-b border-cream-200">
+                      <div className="w-8 h-8 rounded bg-navy-850 text-gold-400 flex items-center justify-center">
+                        <Icons.ShieldCheck />
+                      </div>
+                      <div>
+                        <span className="text-[10px] uppercase font-bold tracking-widest text-gold-600">NICHE PRACTICE</span>
+                        <h3 className="font-serif text-xl sm:text-2xl font-semibold text-navy-950">
+                          IP Litigation & Prosecution
+                        </h3>
+                      </div>
+                    </div>
+
+                    <ul className="mt-6 space-y-4 text-sm text-cream-800">
+                      <li className="flex items-start gap-3">
+                        <span className="mt-1 text-gold-600 font-bold">•</span>
+                        <div>
+                          <strong className="text-navy-950 block">Trademark Filing & Prosecution</strong>
+                          Comprehensive pre-filing search, classification, multi-class filing and registry examination management.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-1 text-gold-600 font-bold">•</span>
+                        <div>
+                          <strong className="text-navy-950 block">Examination Report Replies</strong>
+                          Substantive statutory responses to Section 9 (Absolute Grounds) and Section 11 (Relative Grounds) objections.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-1 text-gold-600 font-bold">•</span>
+                        <div>
+                          <strong className="text-navy-950 block">Opposition & Counterstatement Proceedings</strong>
+                          Drafting notices of opposition, counterstatements (Form TM-O), evidentiary affidavits, and hearing advocacy.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-1 text-gold-600 font-bold">•</span>
+                        <div>
+                          <strong className="text-navy-950 block">Trademark Infringement & Passing Off</strong>
+                          Cease-and-desist notices, interim injunction motions, Anton Piller raid executions, and damages suits.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-1 text-gold-600 font-bold">•</span>
+                        <div>
+                          <strong className="text-navy-950 block">IP Dispute Resolution & Mediation</strong>
+                          Co-existence agreements, structured settlement negotiations, licensing frameworks, and brand partitions.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="mt-8 pt-4 border-t border-cream-200 flex items-center justify-between text-xs font-semibold text-gold-700">
+                    <span>Trademark Registry (TMR) · High Courts</span>
+                    <a href="#ip-prosecution" className="underline hover:text-navy-950">View 7-Step Lifecycle →</a>
+                  </div>
+                </div>
+
+                {/* Column 2: General Litigation */}
+                <div className="reveal-element bg-white p-8 sm:p-10 rounded-xl shadow-md border border-cream-300/80 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-3 pb-4 border-b border-cream-200">
+                      <div className="w-8 h-8 rounded bg-navy-850 text-gold-400 flex items-center justify-center">
+                        <Icons.Gavel />
+                      </div>
+                      <div>
+                        <span className="text-[10px] uppercase font-bold tracking-widest text-gold-600">GENERAL LITIGATION</span>
+                        <h3 className="font-serif text-xl sm:text-2xl font-semibold text-navy-950">
+                          Civil · Criminal · Commercial
+                        </h3>
+                      </div>
+                    </div>
+
+                    <ul className="mt-6 space-y-4 text-sm text-cream-800">
+                      <li className="flex items-start gap-3">
+                        <span className="mt-1 text-gold-600 font-bold">•</span>
+                        <div>
+                          <strong className="text-navy-950 block">Civil Litigation & Injunctions</strong>
+                          Declaration suits, property and title disputes, specific performance, permanent injunctions, and recovery.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-1 text-gold-600 font-bold">•</span>
+                        <div>
+                          <strong className="text-navy-950 block">Criminal Defense & Prosecution</strong>
+                          White-collar offenses, economic fraud, IPC/BNS statutory complaints, bail hearings, and trial representations.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-1 text-gold-600 font-bold">•</span>
+                        <div>
+                          <strong className="text-navy-950 block">NI Act Matters (Section 138)</strong>
+                          End-to-end cheque dishonour litigation: statutory demand notices, complaint filing, cross-examinations, and settlement.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-1 text-gold-600 font-bold">•</span>
+                        <div>
+                          <strong className="text-navy-950 block">Commercial Disputes & Contracts</strong>
+                          Breach of contract, vendor disputes, partnership dissolution, shareholder deadlock, and commercial recovery.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="mt-1 text-gold-600 font-bold">•</span>
+                        <div>
+                          <strong className="text-navy-950 block">Regulatory Compliance & BIS Matters</strong>
+                          Bureau of Indian Standards advisory, product certification disputes, and statutory departmental representations.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="mt-8 pt-4 border-t border-cream-200 flex items-center justify-between text-xs font-semibold text-gold-700">
+                    <span>District Courts · High Court of Delhi · UP Courts</span>
+                    <a href="#litigation-detail" className="underline hover:text-navy-950">Litigation Details →</a>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          {/* =========================================================
+              TRADEMARK & IP PROSECUTION (Dark Navy - 7-Step Lifecycle)
+             ========================================================= */}
+          <section id="ip-prosecution" className="py-24 px-4 sm:px-6 lg:px-8 bg-navy-900 border-t border-gold-500/20 text-slate-100 relative">
+            <div className="max-w-7xl mx-auto">
+              
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <SectionLabel text="END-TO-END BRAND PROTECTION" />
+                <h2 className="font-serif text-3xl sm:text-4xl font-normal mt-2 tracking-tight text-white">
+                  Trademark & IP Lifecycle
+                </h2>
+                <div className="w-12 h-0.5 bg-gold-500 mx-auto mt-4"></div>
+                <p className="text-slate-300 text-sm mt-4 font-light">
+                  A comprehensive, seven-phase framework safeguarding trademark assets from conception to contested enforcement.
+                </p>
+              </div>
+
+              {/* Numbered Two-Column List (01-07) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                {/* 01 Search & Clearance */}
+                <div className="reveal-element bg-navy-850/80 p-6 rounded-lg border border-gold-500/20 flex gap-4 hover:border-gold-500/50 transition-colors">
+                  <span className="font-serif text-2xl font-bold text-gold-400">01</span>
+                  <div>
+                    <h3 className="font-serif text-lg font-medium text-white mb-1">Search & Clearance</h3>
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                      Phonetic, visual, and conceptual clearance searches across the Trade Marks Registry database to evaluate distinctiveness and pre-empt refusal risks.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 02 Application Filing */}
+                <div className="reveal-element bg-navy-850/80 p-6 rounded-lg border border-gold-500/20 flex gap-4 hover:border-gold-500/50 transition-colors">
+                  <span className="font-serif text-2xl font-bold text-gold-400">02</span>
+                  <div>
+                    <h3 className="font-serif text-lg font-medium text-white mb-1">Application Filing</h3>
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                      Strategic classification under Nice Classification, precise specification of goods/services, user affidavit drafting, and expedited filing.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 03 Examination Report Replies */}
+                <div className="reveal-element bg-navy-850/80 p-6 rounded-lg border border-gold-500/20 flex gap-4 hover:border-gold-500/50 transition-colors">
+                  <span className="font-serif text-2xl font-bold text-gold-400">03</span>
+                  <div>
+                    <h3 className="font-serif text-lg font-medium text-white mb-1">Examination Report Replies</h3>
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                      Detailed legal rebuttals to formal objections under Section 9 (distinctiveness) & Section 11 (conflicting citations), supported by judicial precedents.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 04 Opposition & Counterstatements */}
+                <div className="reveal-element bg-navy-850/80 p-6 rounded-lg border border-gold-500/20 flex gap-4 hover:border-gold-500/50 transition-colors">
+                  <span className="font-serif text-2xl font-bold text-gold-400">04</span>
+                  <div>
+                    <h3 className="font-serif text-lg font-medium text-white mb-1">Opposition & Counterstatement Proceedings</h3>
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                      Instituting and defending contested opposition proceedings (Form TM-O), leading evidence under Rule 45/46, and oral hearings before the Registrar.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 05 Brand Protection Strategy */}
+                <div className="reveal-element bg-navy-850/80 p-6 rounded-lg border border-gold-500/20 flex gap-4 hover:border-gold-500/50 transition-colors">
+                  <span className="font-serif text-2xl font-bold text-gold-400">05</span>
+                  <div>
+                    <h3 className="font-serif text-lg font-medium text-white mb-1">Brand Protection & Portfolio Strategy</h3>
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                      Holistic structuring of corporate IP portfolios, licensing frameworks, assignment deeds with goodwill, and franchise IP protocols.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 06 Watch & Monitoring */}
+                <div className="reveal-element bg-navy-850/80 p-6 rounded-lg border border-gold-500/20 flex gap-4 hover:border-gold-500/50 transition-colors">
+                  <span className="font-serif text-2xl font-bold text-gold-400">06</span>
+                  <div>
+                    <h3 className="font-serif text-lg font-medium text-white mb-1">Trademark Watch & Monitoring</h3>
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                      Continuous Trade Marks Journal tracking to identify infringing or deceptively similar applications within the statutory 4-month opposition window.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 07 Dispute Resolution & Mediation */}
+                <div className="reveal-element md:col-span-2 bg-navy-850/80 p-6 rounded-lg border border-gold-500/20 flex gap-4 hover:border-gold-500/50 transition-colors">
+                  <span className="font-serif text-2xl font-bold text-gold-400">07</span>
+                  <div>
+                    <h3 className="font-serif text-lg font-medium text-white mb-1">IP Dispute Resolution & Mediation</h3>
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                      Structured out-of-court dispute resolution, co-existence covenants, territorial delimitations, and enforcement litigation across High Courts.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          {/* =========================================================
+              LITIGATION PRACTICE (Cream - 2x2 Grid)
+             ========================================================= */}
+          <section id="litigation-detail" className="py-24 px-4 sm:px-6 lg:px-8 cream-texture text-cream-900">
+            <div className="max-w-7xl mx-auto">
+              
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <SectionLabel text="COURTROOM ADVOCACY" light={true} />
+                <h2 className="font-serif text-3xl sm:text-4xl font-normal mt-2 tracking-tight text-cream-900">
+                  Litigation Practice
+                </h2>
+                <div className="w-12 h-0.5 bg-gold-600/50 mx-auto mt-4"></div>
+                <p className="text-cream-800 text-sm mt-4 font-normal">
+                  Strategic trial and appellate representation across civil, criminal, and statutory tribunals.
+                </p>
+              </div>
+
+              {/* 2x2 Card Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                {/* Civil Litigation */}
+                <div className="reveal-element bg-white p-8 rounded-lg shadow-sm border border-cream-300">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="w-2 h-2 rounded-full bg-gold-600"></span>
+                    <h3 className="font-serif text-xl font-semibold text-navy-950">Civil Litigation</h3>
+                  </div>
+                  <p className="text-cream-800 text-sm leading-relaxed mb-4">
+                    Representation in property partitions, declaration of title suits, interim and perpetual injunction applications under Order 39 CPC, specific performance of contracts, and money recovery proceedings.
+                  </p>
+                  <div className="text-[11px] font-semibold text-gold-700 uppercase tracking-wider">
+                    Scope: District Courts & High Courts · Real Estate & Civil Rights
+                  </div>
+                </div>
+
+                {/* Criminal Litigation */}
+                <div className="reveal-element bg-white p-8 rounded-lg shadow-sm border border-cream-300">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="w-2 h-2 rounded-full bg-gold-600"></span>
+                    <h3 className="font-serif text-xl font-semibold text-navy-950">Criminal Litigation</h3>
+                  </div>
+                  <p className="text-cream-800 text-sm leading-relaxed mb-4">
+                    Defense and prosecution in white-collar economic offenses, corporate fraud, statutory compliance violations, anticipatory and regular bail hearings, and criminal trial advocacy under IPC / Bharatiya Nyaya Sanhita.
+                  </p>
+                  <div className="text-[11px] font-semibold text-gold-700 uppercase tracking-wider">
+                    Scope: Bail Hearings · Trial Advocacy · Criminal Revisions
+                  </div>
+                </div>
+
+                {/* Negotiable Instruments Act (Section 138) */}
+                <div className="reveal-element bg-white p-8 rounded-lg shadow-sm border border-cream-300">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="w-2 h-2 rounded-full bg-gold-600"></span>
+                    <h3 className="font-serif text-xl font-semibold text-navy-950">Negotiable Instruments Act (Section 138)</h3>
+                  </div>
+                  <p className="text-cream-800 text-sm leading-relaxed mb-4">
+                    Specialized handling of cheque dishonour proceedings: issuance of statutory 15-day demand notices, filing of Section 138 complaints, conducting cross-examination of complainants/accused, and compounding settlements.
+                  </p>
+                  <div className="text-[11px] font-semibold text-gold-700 uppercase tracking-wider">
+                    Scope: Commercial Recovery · Summary Trial · Appellate Defense
+                  </div>
+                </div>
+
+                {/* Commercial Disputes */}
+                <div className="reveal-element bg-white p-8 rounded-lg shadow-sm border border-cream-300">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="w-2 h-2 rounded-full bg-gold-600"></span>
+                    <h3 className="font-serif text-xl font-semibold text-navy-950">Commercial Disputes & Contracts</h3>
+                  </div>
+                  <p className="text-cream-800 text-sm leading-relaxed mb-4">
+                    Resolving high-stakes contract breaches, vendor-distributor conflicts, shareholder deadlocks, partnership dissolutions, and representing clients in domestic arbitration and Commercial Court suits.
+                  </p>
+                  <div className="text-[11px] font-semibold text-gold-700 uppercase tracking-wider">
+                    Scope: Commercial Courts · Arbitration · Corporate Dispute Settlement
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          {/* =========================================================
+              TRACK RECORD (Dark Navy - 5-Column Stat Row with Animation)
+             ========================================================= */}
+          <section id="track-record" className="py-24 px-4 sm:px-6 lg:px-8 bg-navy-950 border-y border-gold-500/20 text-slate-100 relative">
+            <div className="max-w-7xl mx-auto">
+              
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <SectionLabel text="MEASURED OUTCOMES" />
+                <h2 className="font-serif text-3xl sm:text-4xl font-normal mt-2 tracking-tight text-white">
+                  Firm Track Record
+                </h2>
+                <div className="w-12 h-0.5 bg-gold-500 mx-auto mt-4"></div>
+                <p className="text-slate-300 text-sm mt-4 font-light">
+                  A tangible summary of trademark prosecution matters, registry contentions, and resolved disputes.
+                </p>
+              </div>
+
+              {/* 5-Column Stat Row */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 bg-navy-900/90 p-6 sm:p-8 rounded-xl border border-gold-500/30">
+                
+                <AnimatedStat 
+                  value="25–40+" 
+                  label="Trademark Applications" 
+                  subtext="Filed & Prosecuted across classes"
+                />
+
+                <AnimatedStat 
+                  value="10–15" 
+                  label="Examination Replies" 
+                  subtext="Sec 9 & 11 Rebuttals Drafted"
+                />
+
+                <AnimatedStat 
+                  value="15–20" 
+                  label="Counterstatements" 
+                  subtext="Contested TM-O Proceedings"
+                />
+
+                <AnimatedStat 
+                  value="10+" 
+                  label="Opposition Actions" 
+                  subtext="Formal Registry Oppositions Filed"
+                />
+
+                <div className="col-span-2 md:col-span-1">
+                  <AnimatedStat 
+                    value="30+" 
+                    label="Disputes Resolved" 
+                    subtext="Through Structured Mediation"
+                  />
+                </div>
+
+              </div>
+
+              <div className="reveal-element text-center mt-8 text-xs text-slate-400 font-light">
+                *Aggregated matters managed across Trade Marks Registry (Delhi/Mumbai/Kolkata/Chennai), District Courts, and appellate bodies.
+              </div>
+
+            </div>
+          </section>
+
+          {/* =========================================================
+              WHO WE SERVE & WHO WE WORK WITH (Warm Cream)
+             ========================================================= */}
+          <section className="py-24 px-4 sm:px-6 lg:px-8 cream-texture text-cream-900">
+            <div className="max-w-7xl mx-auto">
+              
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <SectionLabel text="CLIENT ENGAGEMENT PROFILES" light={true} />
+                <h2 className="font-serif text-3xl sm:text-4xl font-normal mt-2 tracking-tight text-cream-900">
+                  Clientele & Collaboration
+                </h2>
+                <div className="w-12 h-0.5 bg-gold-600/50 mx-auto mt-4"></div>
+              </div>
+
+              {/* Two-Column List */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                {/* Column 1: Who We Serve */}
+                <div className="reveal-element bg-white p-8 rounded-xl border border-cream-300 shadow-sm">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-gold-600">CLIENT SECTORS</span>
+                  <h3 className="font-serif text-2xl font-semibold text-navy-950 mt-1 mb-6">
+                    Who We Serve
+                  </h3>
+
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 rounded-full bg-cream-200 text-gold-700 flex items-center justify-center shrink-0">
+                        <Icons.Check />
+                      </div>
+                      <div>
+                        <strong className="text-navy-950 text-sm block">Startups & Innovators</strong>
+                        <p className="text-cream-800 text-xs mt-0.5">Protecting nascent brand names, logos, software identifiers, and product lines prior to commercial launch.</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 rounded-full bg-cream-200 text-gold-700 flex items-center justify-center shrink-0">
+                        <Icons.Check />
+                      </div>
+                      <div>
+                        <strong className="text-navy-950 text-sm block">Corporates & Growing Businesses</strong>
+                        <p className="text-cream-800 text-xs mt-0.5">Managing extensive trademark portfolios, cross-class defensive filings, and licensing covenants.</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 rounded-full bg-cream-200 text-gold-700 flex items-center justify-center shrink-0">
+                        <Icons.Check />
+                      </div>
+                      <div>
+                        <strong className="text-navy-950 text-sm block">Business Owners & MSMEs</strong>
+                        <p className="text-cream-800 text-xs mt-0.5">Shielding traditional and regional manufacturing brands against counterfeiters and deceptive copycats.</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 rounded-full bg-cream-200 text-gold-700 flex items-center justify-center shrink-0">
+                        <Icons.Check />
+                      </div>
+                      <div>
+                        <strong className="text-navy-950 text-sm block">Marketing & Brand Teams</strong>
+                        <p className="text-cream-800 text-xs mt-0.5">Pre-clearing prospective brand campaigns, sub-brands, and re-branding exercises to avoid infringement.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Column 2: Who We Work With */}
+                <div className="reveal-element bg-white p-8 rounded-xl border border-cream-300 shadow-sm">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-gold-600">STAKEHOLDER INTERACTION</span>
+                  <h3 className="font-serif text-2xl font-semibold text-navy-950 mt-1 mb-6">
+                    Who We Work With
+                  </h3>
+
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 rounded-full bg-cream-200 text-gold-700 flex items-center justify-center shrink-0">
+                        <Icons.Check />
+                      </div>
+                      <div>
+                        <strong className="text-navy-950 text-sm block">Management & Business Stakeholders</strong>
+                        <p className="text-cream-800 text-xs mt-0.5">Founders, Managing Directors, and CXOs requiring clear legal risk frameworks to make confident executive decisions.</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 rounded-full bg-cream-200 text-gold-700 flex items-center justify-center shrink-0">
+                        <Icons.Check />
+                      </div>
+                      <div>
+                        <strong className="text-navy-950 text-sm block">In-House Marketing & Creative Teams</strong>
+                        <p className="text-cream-800 text-xs mt-0.5">Collaborating during brand naming sprints to select legally defensible and highly protectable trademarks.</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 rounded-full bg-cream-200 text-gold-700 flex items-center justify-center shrink-0">
+                        <Icons.Check />
+                      </div>
+                      <div>
+                        <strong className="text-navy-950 text-sm block">Growing & Scaling Businesses</strong>
+                        <p className="text-cream-800 text-xs mt-0.5">Enterprises expanding across regional and national markets seeking proactive IP clearance and anti-counterfeiting.</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 rounded-full bg-cream-200 text-gold-700 flex items-center justify-center shrink-0">
+                        <Icons.Check />
+                      </div>
+                      <div>
+                        <strong className="text-navy-950 text-sm block">External Counsels & Solicitors</strong>
+                        <p className="text-cream-800 text-xs mt-0.5">Partnering with international solicitors and regional practitioners requiring Indian IP and courtroom representation.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          {/* =========================================================
+              HOW WE WORK (Cream Section with 4-Step Process & Arrows)
+             ========================================================= */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8 bg-cream-100 border-t border-cream-300 text-cream-900">
+            <div className="max-w-7xl mx-auto">
+              
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <SectionLabel text="SYSTEMATIC METHODOLOGY" light={true} />
+                <h2 className="font-serif text-3xl sm:text-4xl font-normal mt-2 tracking-tight text-cream-900">
+                  How We Work
+                </h2>
+                <div className="w-12 h-0.5 bg-gold-600/50 mx-auto mt-4"></div>
+              </div>
+
+              {/* 4-Step Horizontal Process with Arrows */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+                
+                {/* Step 01 */}
+                <div className="reveal-element bg-white p-6 rounded-lg border border-cream-300 shadow-sm relative">
+                  <div className="w-8 h-8 rounded-full bg-navy-850 text-gold-400 font-serif font-bold text-sm flex items-center justify-center mb-4">
+                    01
+                  </div>
+                  <h3 className="font-serif text-lg font-semibold text-navy-950 mb-2">Consultation</h3>
+                  <p className="text-cream-800 text-xs leading-relaxed">
+                    Initial intake to assess brand assets, existing filings, commercial timeline, and exposure to litigation risks.
+                  </p>
+                </div>
+
+                {/* Step 02 */}
+                <div className="reveal-element bg-white p-6 rounded-lg border border-cream-300 shadow-sm relative">
+                  <div className="w-8 h-8 rounded-full bg-navy-850 text-gold-400 font-serif font-bold text-sm flex items-center justify-center mb-4">
+                    02
+                  </div>
+                  <h3 className="font-serif text-lg font-semibold text-navy-950 mb-2">Strategy & Search</h3>
+                  <p className="text-cream-800 text-xs leading-relaxed">
+                    In-depth clearance searching, risk-matrix formulation, classification mapping, and pre-litigation planning.
+                  </p>
+                </div>
+
+                {/* Step 03 */}
+                <div className="reveal-element bg-white p-6 rounded-lg border border-cream-300 shadow-sm relative">
+                  <div className="w-8 h-8 rounded-full bg-navy-850 text-gold-400 font-serif font-bold text-sm flex items-center justify-center mb-4">
+                    03
+                  </div>
+                  <h3 className="font-serif text-lg font-semibold text-navy-950 mb-2">Filing & Litigation</h3>
+                  <p className="text-cream-800 text-xs leading-relaxed">
+                    Statutory filings before the Trade Marks Registry, drafting examination replies, or instituting court suits.
+                  </p>
+                </div>
+
+                {/* Step 04 */}
+                <div className="reveal-element bg-white p-6 rounded-lg border border-cream-300 shadow-sm relative">
+                  <div className="w-8 h-8 rounded-full bg-navy-850 text-gold-400 font-serif font-bold text-sm flex items-center justify-center mb-4">
+                    04
+                  </div>
+                  <h3 className="font-serif text-lg font-semibold text-navy-950 mb-2">Enforcement</h3>
+                  <p className="text-cream-800 text-xs leading-relaxed">
+                    Post-registration monitoring, handling opposition proceedings, cease & desist actions, and long-term defense.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          {/* =========================================================
+              MEET THE FOUNDER (Warm Cream - Photo Left / Text Right)
+             ========================================================= */}
+          <section id="founder" className="py-24 px-4 sm:px-6 lg:px-8 cream-texture text-cream-900 border-t border-cream-300">
+            <div className="max-w-7xl mx-auto">
+              
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <SectionLabel text="LEADERSHIP & CREDENTIALS" light={true} />
+                <h2 className="font-serif text-3xl sm:text-4xl font-normal mt-2 tracking-tight text-cream-900">
+                  Meet the Founder
+                </h2>
+                <div className="w-12 h-0.5 bg-gold-600/50 mx-auto mt-4"></div>
+              </div>
+
+              <div className="bg-white p-8 sm:p-12 rounded-2xl border border-cream-300 shadow-md">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                  
+                  {/* Left: Founder Portrait */}
+                  <div className="lg:col-span-4 flex flex-col items-center text-center">
+                    <div className="w-48 sm:w-56 aspect-[3/4] rounded-2xl bg-navy-950 p-1.5 border-2 border-gold-500/60 shadow-xl overflow-hidden">
+                      <img
+                        src="assets/founder.jpg"
+                        alt="Amogh Singh, Founding Partner"
+                        className="w-full h-full object-cover object-top rounded-xl"
+                      />
+                    </div>
+
+                    <div className="mt-4">
+                      <span className="inline-block px-3 py-1 bg-gold-500/10 text-gold-700 text-xs font-semibold rounded-full border border-gold-500/30">
+                        4+ Years of Experience
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Right: Bio & Credentials */}
+                  <div className="lg:col-span-8 space-y-6">
+                    <div>
+                      <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-navy-950">
+                        Amogh Singh
+                      </h3>
+                      <p className="text-gold-700 text-sm font-semibold uppercase tracking-wider mt-1">
+                        Founding Partner & Intellectual Property Attorney
+                      </p>
+                    </div>
+
+                    <p className="text-cream-800 text-sm sm:text-base leading-relaxed">
+                      Amogh Singh spearheads the intellectual property and litigation practice at Jadaun & Jadaun Associates. With specialized post-graduate training in intellectual property law from one of India's premier national law universities and practical expertise in U.S. and Indian trademark procedures, Amogh combines high-level statutory knowledge with decisive courtroom strategy.
+                    </p>
+
+                    {/* Credentials List */}
+                    <div className="pt-2">
+                      <h4 className="text-xs uppercase font-bold tracking-widest text-navy-950 mb-3">
+                        Academic Credentials & Professional Background
+                      </h4>
+                      
+                      <div className="space-y-2.5 text-xs sm:text-sm text-cream-800">
+                        <div className="flex items-start gap-2.5">
+                          <span className="text-gold-600 font-bold mt-0.5">▪</span>
+                          <div>
+                            <strong>LL.M. in Intellectual Property Law</strong> — National Law University, Delhi (NLUD)
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-2.5">
+                          <span className="text-gold-600 font-bold mt-0.5">▪</span>
+                          <div>
+                            <strong>Diploma in U.S. Intellectual Property Law & Paralegal Studies</strong> — LawSikho
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-2.5">
+                          <span className="text-gold-600 font-bold mt-0.5">▪</span>
+                          <div>
+                            <strong>Regulatory & Statutory Compliance</strong> — Substantive advisory experience including Bureau of Indian Standards (BIS) certifications and product compliance frameworks.
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-2.5">
+                          <span className="text-gold-600 font-bold mt-0.5">▪</span>
+                          <div>
+                            <strong>Bar Admission & Forum Practice</strong> — Enrolled Advocate practicing before Delhi High Court, District Courts of Delhi & UP, and the Trade Marks Registry.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="pt-4 flex flex-wrap gap-4 items-center border-t border-cream-200 text-xs">
+                      <a 
+                        href="mailto:adv.amogh18@gmail.com"
+                        className="inline-flex items-center gap-2 text-navy-950 font-semibold hover:text-gold-700 transition-colors"
+                      >
+                        <Icons.Mail />
+                        <span>adv.amogh18@gmail.com</span>
+                      </a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          {/* =========================================================
+              OUR TEAM (Warm Cream)
+             ========================================================= */}
+          <section id="team" className="py-24 px-4 sm:px-6 lg:px-8 cream-texture border-t border-cream-300">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <SectionLabel text="OUR PEOPLE" light={true} />
+                <h2 className="font-serif text-3xl sm:text-4xl font-normal mt-2 tracking-tight text-cream-900">
+                  Our Team
+                </h2>
+                <div className="w-12 h-0.5 bg-gold-600/50 mx-auto mt-4"></div>
+              </div>
+
+              <div className="grid grid-cols-[repeat(auto-fit,minmax(16rem,18rem))] justify-center gap-8 max-w-6xl mx-auto">
+                <article className="reveal-element bg-white rounded-xl border border-cream-300 shadow-sm overflow-hidden">
+                  <div className="aspect-[4/5] bg-navy-950 overflow-hidden">
+                    <img
+                      src="assets/founder.jpg"
+                      alt="Amogh Singh"
+                      className="w-full h-full object-cover team-portrait team-founder"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-semibold text-navy-950">Amogh Singh</h3>
+                    <p className="text-gold-700 text-xs font-semibold uppercase tracking-wider mt-1">
+                      Founding Partner & IP Attorney
+                    </p>
+                    <p className="text-cream-800 text-sm leading-relaxed mt-3">
+                      Leads the firm’s intellectual property and litigation practice.
+                    </p>
+                  </div>
+                </article>
+
+                <article className="reveal-element bg-white rounded-xl border border-cream-300 shadow-sm overflow-hidden">
+                  <div className="aspect-[4/5] bg-navy-950 overflow-hidden">
+                    <img
+                      src="assets/vipul-saini.jpg"
+                      alt="Vipul Saini"
+                      className="w-full h-full object-cover team-portrait team-vipul"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-semibold text-navy-950">Vipul Saini</h3>
+                    <p className="text-gold-700 text-xs font-semibold uppercase tracking-wider mt-1">Partner</p>
+                    <p className="text-cream-800 text-sm leading-relaxed mt-3">
+                      Real estate and property law, civil and rent disputes, title verification, and land acquisition.
+                    </p>
+                  </div>
+                </article>
+
+                <article className="reveal-element bg-white rounded-xl border border-cream-300 shadow-sm overflow-hidden">
+                  <div className="aspect-[4/5] bg-navy-950 overflow-hidden">
+                    <img
+                      src="assets/rupender-hooda.jpg"
+                      alt="Rupender Hooda"
+                      className="w-full h-full object-cover team-portrait team-rupender"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-semibold text-navy-950">Rupender Hooda</h3>
+                    <p className="text-gold-700 text-xs font-semibold uppercase tracking-wider mt-1">Advocate</p>
+                    <p className="text-cream-800 text-sm leading-relaxed mt-3">
+                      Criminal law, civil writs and constitutional matters, and appellate practice.
+                    </p>
+                  </div>
+                </article>
+
+                <article className="reveal-element bg-white rounded-xl border border-cream-300 shadow-sm overflow-hidden">
+                  <div className="aspect-[4/5] bg-navy-950 overflow-hidden">
+                    <img
+                      src="assets/sparsh-rawat.jpg"
+                      alt="Sparsh Rawat"
+                      className="w-full h-full object-cover team-portrait team-sparsh"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-semibold text-navy-950">Sparsh Rawat</h3>
+                    <p className="text-gold-700 text-xs font-semibold uppercase tracking-wider mt-1">Advocate</p>
+                    <p className="text-cream-800 text-sm leading-relaxed mt-3">
+                      Trademark prosecution, brand protection, and intellectual property advisory.
+                    </p>
+                  </div>
+                </article>
+
+                <article className="reveal-element bg-white rounded-xl border border-cream-300 shadow-sm overflow-hidden">
+                  <div className="aspect-[4/5] bg-navy-950 overflow-hidden">
+                    <img
+                      src="assets/venkatesh-kaushik.jpg"
+                      alt="Venkatesh Kaushik"
+                      className="w-full h-full object-cover team-portrait team-venkatesh"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-semibold text-navy-950">Venkatesh Kaushik</h3>
+                    <p className="text-gold-700 text-xs font-semibold uppercase tracking-wider mt-1">Advocate</p>
+                    <p className="text-cream-800 text-sm leading-relaxed mt-3">
+                      Writ and constitutional matters, civil and criminal litigation, and service and insurance matters.
+                    </p>
+                  </div>
+                </article>
+
+                <article className="reveal-element bg-white rounded-xl border border-cream-300 shadow-sm overflow-hidden">
+                  <div className="aspect-[4/5] bg-navy-950 overflow-hidden">
+                    <img
+                      src="assets/rashi-sharma.jpg"
+                      alt="Rashi Sharma"
+                      className="w-full h-full object-cover team-portrait team-rashi"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-semibold text-navy-950">Rashi Sharma</h3>
+                    <p className="text-gold-700 text-xs font-semibold uppercase tracking-wider mt-1">Advocate</p>
+                    <p className="text-cream-800 text-sm leading-relaxed mt-3">
+                      Criminal law and bail, environmental and NGT matters, and civil trust and property disputes.
+                    </p>
+                  </div>
+                </article>
+
+                <article className="reveal-element bg-white rounded-xl border border-cream-300 shadow-sm overflow-hidden">
+                  <div className="aspect-[4/5] bg-navy-950 overflow-hidden">
+                    <img
+                      src="assets/akshat-sharma.jpg"
+                      alt="Akshat Sharma"
+                      className="w-full h-full object-cover team-portrait team-akshat"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-semibold text-navy-950">Akshat Sharma</h3>
+                    <p className="text-gold-700 text-xs font-semibold uppercase tracking-wider mt-1">Advocate</p>
+                    <p className="text-cream-800 text-sm leading-relaxed mt-3">
+                      Criminal and white-collar crime, commercial and corporate disputes, and company law.
+                    </p>
+                  </div>
+                </article>
+
+                <article className="reveal-element bg-white rounded-xl border border-cream-300 shadow-sm overflow-hidden">
+                  <div className="aspect-[4/5] bg-navy-950 overflow-hidden">
+                    <img
+                      src="assets/arshiya-chauhan.jpeg"
+                      alt="Arshiya Chauhan"
+                      className="w-full h-full object-cover team-portrait team-arshiya"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-semibold text-navy-950">Arshiya Chauhan</h3>
+                    <p className="text-gold-700 text-xs font-semibold uppercase tracking-wider mt-1">Off-Counsel</p>
+                    <p className="text-cream-800 text-sm leading-relaxed mt-3">
+                      Advises on trademark, copyright, design, IP prosecution and enforcement, and commercial matters.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          {/* =========================================================
+              ORGANISATIONS WE HAVE WORKED WITH (Dark Navy)
+             ========================================================= */}
+          <section id="clients" className="py-20 px-4 sm:px-6 lg:px-8 bg-navy-850 border-t border-gold-500/20 text-slate-100">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center max-w-3xl mx-auto mb-12">
+                <SectionLabel text="ORGANISATIONS" />
+                <h2 className="font-serif text-3xl sm:text-4xl font-normal mt-2 tracking-tight text-white">
+                  Organisations We Have Worked With
+                </h2>
+                <div className="w-12 h-0.5 bg-gold-500 mx-auto mt-4"></div>
+                <p className="text-slate-300 text-sm mt-4 font-light">
+                  An informational overview of organisations represented by the firm.
+                </p>
+              </div>
+
+              <div className="max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+                  <div className="flex items-center justify-center h-40 rounded-xl border border-gold-500/20 bg-cream-50 p-4 shadow-sm">
+                    <div className="client-logo-box">
+                      <img src="assets/bfpl-logo.jpeg" alt="BFPL logo" className="max-h-24 max-w-full object-contain" />
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-center h-40 rounded-xl border border-gold-500/20 bg-cream-50 p-4 shadow-sm">
+                    <div className="client-logo-box">
+                      <img src="logo1.jpeg" alt="Along & Drooks logo" className="max-h-24 max-w-full object-contain" />
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-center h-40 rounded-xl border border-gold-500/20 bg-cream-50 p-4 shadow-sm">
+                    <div className="client-logo-box">
+                      <img src="logo2.jpeg" alt="Future Funding logo" className="max-h-24 max-w-full object-contain" />
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-center h-40 rounded-xl border border-gold-500/20 bg-cream-50 p-4 shadow-sm">
+                    <div className="client-logo-box">
+                      <img src="logo3.jpeg" alt="RST Electricals logo" className="max-h-24 max-w-full object-contain" />
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-center h-40 rounded-xl border border-gold-500/20 bg-cream-50 p-4 shadow-sm">
+                    <div className="client-logo-box">
+                      <img src="logo4.jpeg" alt="Plunge Entertainment logo" className="max-h-24 max-w-full object-contain" />
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-center h-40 rounded-xl border border-gold-500/20 bg-cream-50 p-4 shadow-sm">
+                    <div className="client-logo-box">
+                      <img src="logo5.jpeg" alt="ivaGo Soles logo" className="max-h-24 max-w-full object-contain" />
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-center h-40 rounded-xl border border-gold-500/20 bg-cream-50 p-4 shadow-sm">
+                    <div className="client-logo-box">
+                      <img src="logo6.jpeg" alt="Sukun Cafe logo" className="max-h-24 max-w-full object-contain" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* =========================================================
+              OUR PRESENCE (Dark Navy - 3 Column Location Block)
+             ========================================================= */}
+          <section id="presence" className="py-24 px-4 sm:px-6 lg:px-8 bg-navy-850 border-t border-gold-500/20 text-slate-100">
+            <div className="max-w-7xl mx-auto">
+              
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <SectionLabel text="GEOGRAPHIC FOOTPRINT" />
+                <h2 className="font-serif text-3xl sm:text-4xl font-normal mt-2 tracking-tight text-white">
+                  Our Jurisdictional Presence
+                </h2>
+                <div className="w-12 h-0.5 bg-gold-500 mx-auto mt-4"></div>
+                <p className="text-slate-300 text-sm mt-4 font-light">
+                  Strategic locations enabling seamless client consultation and prompt appearances across key registries and courts.
+                </p>
+              </div>
+
+              {/* 3-Column Location Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                {/* Agra */}
+                <div className="reveal-element bg-navy-900 p-8 rounded-xl border border-gold-500/20 relative group hover:border-gold-400 transition-colors">
+                  <div className="w-10 h-10 rounded bg-navy-800 border border-gold-500/40 flex items-center justify-center text-gold-400 mb-6">
+                    <Icons.MapPin />
+                  </div>
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-gold-400">BASE OF PRACTICE</span>
+                  <h3 className="font-serif text-2xl font-semibold text-white mt-1 mb-2">Agra</h3>
+                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                    Uttar Pradesh — Serving regional industrial hubs, commercial manufacturing units, MSMEs, and district judicial forums.
+                  </p>
+                  <div className="text-[11px] text-slate-400 border-t border-white/10 pt-3">
+                    Headquarters & Primary Chambers
+                  </div>
+                </div>
+
+                {/* Delhi */}
+                <div className="reveal-element bg-navy-900 p-8 rounded-xl border border-gold-500/20 relative group hover:border-gold-400 transition-colors">
+                  <div className="w-10 h-10 rounded bg-navy-800 border border-gold-500/40 flex items-center justify-center text-gold-400 mb-6">
+                    <Icons.MapPin />
+                  </div>
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-gold-400">NATIONAL CAPITAL</span>
+                  <h3 className="font-serif text-2xl font-semibold text-white mt-1 mb-2">Delhi NCR</h3>
+                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                    Delhi High Court, District Courts (Patiala House, Saket, Tis Hazari), and Trade Marks Registry (TMR Dwarka).
+                  </p>
+                  <div className="text-[11px] text-slate-400 border-t border-white/10 pt-3">
+                    Registry Hearings & Appellate Litigation
+                  </div>
+                </div>
+
+                {/* United Kingdom */}
+                <div className="reveal-element bg-navy-900 p-8 rounded-xl border border-gold-500/20 relative group hover:border-gold-400 transition-colors">
+                  <div className="w-10 h-10 rounded bg-navy-800 border border-gold-500/40 flex items-center justify-center text-gold-400 mb-6">
+                    <Icons.MapPin />
+                  </div>
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-gold-400">INTERNATIONAL OUTREACH</span>
+                  <h3 className="font-serif text-2xl font-semibold text-white mt-1 mb-2">United Kingdom</h3>
+                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                    Europe & Cross-Border Advisory — Providing regional IP strategic support and liaison for cross-border brand portfolios.
+                  </p>
+                  <div className="text-[11px] text-slate-400 border-t border-white/10 pt-3">
+                    Cross-Border Advisory & Liaison Support
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          {/* =========================================================
+              CONTACT & FOOTER (Dark Navy)
+             ========================================================= */}
+          <footer id="contact" className="bg-navy-950 text-slate-300 pt-20 pb-12 border-t border-gold-500/30 relative">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+                
+                {/* Left: Contact Info & Engagement Notice */}
+                <div className="lg:col-span-6 space-y-6">
+                  <div>
+                    <SectionLabel text="GET IN TOUCH" />
+                    <h2 className="font-serif text-3xl sm:text-4xl text-white font-normal mt-2">
+                      Initiate Legal Counsel
+                    </h2>
+                    <p className="text-slate-300 text-sm mt-3 font-light leading-relaxed max-w-lg">
+                      Reach out directly to Founding Partner Amogh Singh for confidential matter assessment, trademark clearance queries, or court representation.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4 pt-2">
+                    
+                    {/* Direct Email with Copy Action */}
+                    <div className="flex items-center gap-3">
+                      <div className="w-9 h-9 rounded bg-navy-900 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0">
+                        <Icons.Mail />
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <a 
+                          href="mailto:adv.amogh18@gmail.com" 
+                          className="font-medium text-white hover:text-gold-300 text-sm sm:text-base underline underline-offset-4 decoration-gold-500/40 hover:decoration-gold-400 transition-colors"
+                        >
+                          adv.amogh18@gmail.com
+                        </a>
+                        <button 
+                          onClick={copyEmailToClipboard} 
+                          className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 bg-navy-800 hover:bg-gold-500 hover:text-navy-950 rounded border border-gold-500/30 transition-all"
+                          title="Copy email to clipboard"
+                        >
+                          {copiedEmail ? "Copied!" : "Copy"}
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Offices Line */}
+                    <div className="flex items-start gap-3">
+                      <div className="w-9 h-9 rounded bg-navy-900 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0">
+                        <Icons.MapPin />
+                      </div>
+                      <div className="text-sm">
+                        <span className="text-white font-medium block">Office Locations</span>
+                        <span className="text-slate-400 text-xs">Agra (UP) · Delhi NCR · United Kingdom (Advisory)</span>
+                      </div>
+                    </div>
+
+                    {/* Consultations Mode */}
+                    <div className="flex items-start gap-3">
+                      <div className="w-9 h-9 rounded bg-navy-900 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0">
+                        <Icons.ShieldCheck />
+                      </div>
+                      <div className="text-sm">
+                        <span className="text-white font-medium block">Direct Partner Consultation</span>
+                        <span className="text-slate-400 text-xs">In-person & Virtual Chambers available by appointment</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* Right: Interactive Quick Inquiry Card */}
+                <div className="lg:col-span-6">
+                  <div className="bg-navy-900 p-8 rounded-xl border border-gold-500/20 shadow-xl">
+                    <h3 className="font-serif text-xl text-white font-medium mb-2">
+                      Schedule a Matter Consultation
+                    </h3>
+                    <p className="text-slate-400 text-xs mb-6">
+                      Submit an introductory inquiry to coordinate a direct discussion with Founding Partner Amogh Singh.
+                    </p>
+
+                    <form onSubmit={(e) => {
+                      e.preventDefault();
+                      alert("Thank you for your inquiry. Amogh Singh will respond directly to the provided email within 24 business hours.");
+                    }} className="space-y-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-[10px] uppercase tracking-widest text-slate-300 font-bold mb-1">Your Name / Entity</label>
+                          <input 
+                            type="text" 
+                            required 
+                            placeholder="e.g., Jane Doe / Acme Corp" 
+                            className="w-full bg-navy-950 border border-slate-700 focus:border-gold-400 rounded px-3 py-2 text-xs text-white placeholder-slate-500 outline-none transition-colors"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-[10px] uppercase tracking-widest text-slate-300 font-bold mb-1">Email Address</label>
+                          <input 
+                            type="email" 
+                            required 
+                            placeholder="name@company.com" 
+                            className="w-full bg-navy-950 border border-slate-700 focus:border-gold-400 rounded px-3 py-2 text-xs text-white placeholder-slate-500 outline-none transition-colors"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-[10px] uppercase tracking-widest text-slate-300 font-bold mb-1">Matter Category</label>
+                        <select className="w-full bg-navy-950 border border-slate-700 focus:border-gold-400 rounded px-3 py-2 text-xs text-slate-200 outline-none transition-colors">
+                          <option>Trademark Filing / Clearance Search</option>
+                          <option>Examination Report / Section 9 & 11 Objection</option>
+                          <option>Trademark Opposition / Dispute</option>
+                          <option>Civil / Commercial Litigation</option>
+                          <option>NI Act (Section 138) Cheque Dishonour</option>
+                          <option>Criminal Defense / General Advisory</option>
+                          <option>BIS & Regulatory Compliance</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-[10px] uppercase tracking-widest text-slate-300 font-bold mb-1">Brief Overview</label>
+                        <textarea 
+                          rows="3" 
+                          placeholder="Brief non-confidential description of the legal assistance required..." 
+                          className="w-full bg-navy-950 border border-slate-700 focus:border-gold-400 rounded px-3 py-2 text-xs text-white placeholder-slate-500 outline-none transition-colors"
+                        ></textarea>
+                      </div>
+
+                      <button 
+                        type="submit" 
+                        className="w-full py-3 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-bold uppercase tracking-widest text-xs rounded transition-all shadow-md active:scale-[0.99]"
+                      >
+                        Transmit Matter Inquiry
+                      </button>
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Bottom Regulatory Disclaimer & Notice */}
+              <div className="pt-8 space-y-6 text-slate-400">
+                
+                {/* Statutory Bar Council Notice */}
+                <div className="p-4 rounded bg-navy-900/60 border border-white/5 text-[11px] leading-relaxed">
+                  <p className="font-semibold text-slate-300 mb-1">Statutory Regulatory Disclaimer:</p>
+                  <p>
+                    As per the rules of the Bar Council of India, law firms and advocates are not permitted to solicit work or advertise. This website is meant solely for informational purposes to provide a firm profile and general overview of Jadaun & Jadaun Associates. Nothing contained herein constitutes formal legal advice or creates an attorney-client relationship. All viewers accessing this site do so voluntarily.
+                  </p>
+                </div>
+
+                {/* Boxed IP / Trademark Mark Notice */}
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs pt-2">
+                  <div className="flex items-center gap-2">
+                    <img src="assets/logo.png" alt="" className="w-7 h-7 rounded-full object-cover ring-1 ring-gold-500/40" />
+                    <span>© {new Date().getFullYear()} Jadaun & Jadaun Associates. All Rights Reserved.</span>
+                  </div>
+                  
+                  <div className="px-3 py-1 bg-navy-900 border border-gold-500/20 rounded text-[10px] tracking-wider text-slate-300">
+                    J&J™ and JADAUN & JADAUN ASSOCIATES™ are proprietary marks.
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </footer>
+
+        </div>
+      );
+    }
+
+    // Mount React App
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
